@@ -1,0 +1,1046 @@
+:root{
+    --secondColor : #1DAEFF;
+    --FontSizeUpBar :  1.6rem ;
+}
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+*{
+    margin:0;
+    padding: 0;
+    outline: none;
+}
+
+@font-face {
+    font-family: PoppinsReg;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+/*************************************** The PlaceHolder Of The input ************************************************/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:   rgba(0, 0, 0, 0.229);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:   rgba(0, 0, 0, 0.229);
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:   rgba(0, 0, 0, 0.229);
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:   rgba(0, 0, 0, 0.229);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:   rgba(0, 0, 0, 0.229);
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color:   rgba(0, 0, 0, 0.229);
+}
+/**********************************************************************************************************************/
+/* Configurate Some Tags */
+html{
+    font-size: 10px;
+}
+body{
+    font-family: PoppinsReg;
+    background-color: #0B0E19;
+}
+a{
+    color:#7A3DF2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle dark shadow */
+    font-weight: bold; /* Makes the text bolder */
+}
+header{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    outline: none;
+    cursor: pointer;
+}
+nav li {
+    transition: color .3s;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.ActivePage{
+    transition: color .3s;
+    border-bottom: 1px solid var(--secondColor);
+    color: var(--secondColor);
+}
+.iconBurger i{
+    font-size: 25px;
+    color: var(--secondColor);
+}
+/* Container Style */
+.Container{
+    width: 80%;
+    max-width: 1500px;
+}
+/*************************************************/
+/* The Header Style */
+header .UpBar , header .UpBar nav , header .UpBar nav ul {
+    display: flex;
+    align-items: center;
+}
+header .UpBar {
+    justify-content: space-between;
+    place-items: center;
+    height: 100px;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 280px;
+    filter: brightness(0.9) contrast(1.2);
+}
+header .UpBar nav{
+        font-size: 1.5rem;
+        /* background-color: red; */
+        height: 100%;
+        gap: 100px;
+}
+header .UpBar nav ul {
+    height: 37px;
+    font-size: 1.6rem ;
+    /* background-color: red; */
+    
+}
+header .UpBar nav ul li{
+    display: flex;
+    align-items: center;
+    padding-inline:32px;
+    height: 100%;
+}
+header .UpBar nav ul a{
+    border: 1px solid transparent;
+    height: 100%;
+}
+header .UpBar nav button {
+    padding-inline: 30px;
+    padding-block:10px;
+    border: 2px solid var(--secondColor);
+    background-color: white;
+    border-radius: 8px;
+    font-size: 1.6rem ;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--secondColor);
+    transition: all .3s;
+    cursor: pointer;
+
+}
+
+
+/* The Hero Section Style */
+.HeroContainer{
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.HeroSection{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+/* The Background Image Cover */
+.BackgroundBanner{
+    width: 100%;
+    border-radius: 7px;
+}
+.BackgroundBanner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+/* ************************** */
+
+
+/* The Content Of The hero banner that include the Heading h1 And Paragraph */
+.ContentContainer{
+    position: absolute;
+    top: 0px;
+    max-width: 1200px;
+    margin-inline: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    border-radius: 20px; /* Adjust the value as needed */
+    overflow: hidden; /* Prevent content from overflowing the rounded corners */
+}
+
+.ContentContainer .content{
+    font-size: 2.4rem ;
+}
+.ContentContainer .content h1{
+    line-height: 70px;
+    width: 500px    ;
+}
+.ContentContainer .content p{
+    width: 400px;
+    font-size: 1.6rem ;
+    line-height: 30px;
+}
+
+/* The Search Bar That Includes The Selection And Search Button And Action button */
+.searchbar .SearchInputs {
+    background-color: rgba(60, 60, 60, 0.8); /* Slightly lighter color for better visibility */
+    backdrop-filter: blur(8px); /* Slightly less blur for a clearer view */
+    display: flex;
+    height: 50px;
+    width: 855px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Action Buttons Above The Search Bar */
+.searchbar .ButtonOptions {
+    height: 50px;
+}
+
+/* Search Button */
+.searchbar .ButtonOptions .BtnSrch {
+    height: 100%;
+    padding-inline: 30px;
+    border: none;
+    font-size: 1.6rem;
+    background-color: rgba(255, 255, 255, 0.7); /* Lighter button background for contrast */
+    color: rgba(0, 0, 0, 0.8); /* Darker text color for better readability */
+    border-radius: 10px; /* Slightly rounded corners for the button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.searchbar .ButtonOptions .BtnSrch:hover {
+    background-color: rgba(255, 255, 255, 1); /* Full color on hover for clarity */
+    color: rgba(0, 0, 0, 1); /* Full color on hover for readability */
+}
+
+
+/* The Activated Button */
+.activeButtonSearch {
+    border-top-left-radius: 8px; /* Original radius */
+    border-top-right-radius: 8px; /* Original radius */
+    background-color: rgba(255, 255, 255, 0.5) !important; /* Semi-transparent background */
+    color: black !important;
+}
+
+/* Search Inputs Container */
+.SearchInputs {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    justify-content: space-between;
+    padding: 25px;
+    border-radius: 8px; /* Original radius */
+    background-color: rgba(160, 64, 242, 0.8); /* Purple background */
+}
+
+/* Input Element */
+.SearchInputs .Input {
+    width: -webkit-fill-available;
+}
+
+/* Content within the Search Inputs */
+.SearchInputs .inputContent p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* The Style Of The Select Option */
+.Input select {
+    background-color: transparent; /* Keep it transparent */
+    width: 100%;
+    border: none;
+    padding-block: 10px;
+}
+
+/* The Search Button Style And Color */
+.searchButton {
+    padding: 12px;
+}
+
+/* Button Styles */
+.searchButton button {
+    padding: 12px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7); /* Lighter background */
+    border-radius: 8px; /* Original radius */
+}
+
+/* *********************END THE HERO BANNER*********************************** */
+
+
+
+
+/* ************ Start Of available Countries Section Style ******************* */
+.CountriesAvail{
+    display: flex;
+    justify-content: center;   
+    margin-top: 100px;
+}
+
+/* The Title Of The Section */
+.cardSection .SectionTitle{
+    display: flex;
+    justify-content: center;
+    margin-block: 50px;
+}
+.cardSection .SectionTitle p{
+    font-size: 2.6rem;
+    font-weight: 800;
+    width: 400px;   
+    text-align: center;
+    background: linear-gradient(90deg, #763AF5, #A604F2); /* Linear gradient */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    text-fill-color: transparent; 
+}
+
+/* Section Of All Cards Items Of this Section */
+.cardSection .cardItems{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cardSection .cardItems p{
+    text-transform: uppercase;
+    font-size:  2.6rem;
+    font-weight: 600;
+}
+.cardSection .cardItems .CardTitle{
+    position: relative;
+    top: -400px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ************ Start Of Recently Added Section Style ******************* */
+
+.RecentlyAdded{
+    display: flex;
+    justify-content: center;   
+    margin-top: 100px;
+}
+.BarRecAdded{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem ;
+    
+}
+.BarRecAdded a{
+    color: var(--secondColor);
+}
+.centerContainerRec{
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+.AllRecCardsItems , .Details , .underInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.titleRec p{
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+    color:#FFFFFF;
+}
+.RecCardItem{
+    display: flex;
+    max-width: 480px;
+    padding: 25px;
+    margin-block: 20px;
+    border-radius: 45px;
+    border: 1px solid rgba(128, 128, 128, 0.581);
+    gap: 35px;
+    transition: transform .4s;
+}
+/* the only one item of the content */
+.activeItem{
+    border: 1px solid var(--secondColor);
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.149);
+}
+.Details{
+    display: flex;
+    justify-content: space-between;
+}
+.underInfo{
+    justify-content: space-between;
+    display: flex;
+}
+/* container of the cards */
+.AllRecCardsItems {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Informations{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.underInfo button{
+    border: none;
+    padding: 12px;
+    border-radius: 15px;
+    background-color: #8F90A6;
+    color:white;
+
+}
+.underInfo p{
+
+    color:#8F90A6;
+}
+.Details p{
+    color:#8F90A6;
+    font-size: 1.5rem;
+}
+
+
+/* The last Part Of this page contact us */
+
+.lastPartContainer{
+    margin-block: 100px;
+    background-color: red;
+    background: linear-gradient(to top, #e3f2f5, #cde3f0);
+    border-radius: 50px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important; 
+    transition :transform .4s;
+}
+
+.lastPartBanner img {
+    width: 650px;
+}
+.ContentText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    align-items: start;
+    gap: 60px;
+}
+.ContentText p{
+    font-size:2rem;
+}
+.ContentText p:nth-child(1){
+    font-weight: 600;
+}
+.ContentText button {
+    padding-block: 15px;
+    padding-inline: 50px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--secondColor);
+    color: white;
+    letter-spacing: 3px;
+}
+
+
+
+/* The Footer section */
+footer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.FotterContent{
+    display: flex;
+    font-size:  1.6rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+}
+
+.FotterContent .FirstCol{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.FotterContent .ThirdCol, .FotterContent .SecondCol {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding-inline: 20px;
+}
+.FotterContent .ThirdCol .TakeATourTitle,
+.FotterContent .ForthCol .TakeATourTitle,
+.FotterContent .SecondCol .TakeATourTitle{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #763AF5;
+}
+.FotterContent .ThirdCol ul,
+.TakeATourNav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.NewLetter{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    width: 277px;
+    gap: 50px;
+}
+.NewLetter p{
+    font-size: 1.5rem;
+    line-height: 25px;
+    color: #8F90A6;
+}
+.NewLetter .newsLetterInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 39px;
+    overflow: hidden;
+    border: 2px solid rgba(73, 73, 73, 0.568);
+}
+
+
+.NewLetter .newsLetterInput input{
+    width: 100%;
+    height: 60px;
+    border: none;
+    padding-left: 20px;
+    font-size: var(--FontSizeUpBar);
+}
+
+.NewLetter .newsLetterInput .icon{
+    width:60px ;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-6px);
+}
+.NewLetter .newsLetterInput .icon button{
+    border: none;
+    background: var(--secondColor);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: white;
+}
+
+
+.FirstCol p{
+    font-size: 1rem;
+    line-height: 20px;
+    color:#8F90A6;
+}
+
+
+.socialMedia{
+    display: flex;
+    gap: 25px;
+}
+.socialMedia img{
+    transition: .3s
+}
+.socialMedia img:hover{
+    transition: .3s;
+    transform: translateY(-0px) scale(1.3);
+}
+
+
+.carditem img{
+    transition: .3s;
+    border-radius: 30px;
+}
+.carditem p{
+    transition: .2s;
+}
+ /*****************/
+/* Hover Section */
+/****************/
+.carditem:hover.carditem img{
+    transition: .3s;
+    transform: translateY(-10px);
+    box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.492);
+}
+
+.carditem:hover.carditem p{
+    font-size: 2.5rem;
+    transition: .3s;
+    transform: translateY(-10px);
+}
+
+nav li:hover{
+    transition: color .3s;
+    border-bottom: 1px solid var(--secondColor);
+    color: var(--secondColor);
+}
+.UpBar nav button:hover{
+    background-color: var(--secondColor);
+    color: white;
+    transition: all .3s;
+}
+.lastPartContainer:hover{
+    background-color: red;
+    transform: scale(1.02);
+    transition :transform .4s;
+}
+.RecCardItem:hover{
+    transform: scale(1.02);
+    transition: transform .4s;
+}
+
+
+.searchbar .ButtonOptions .BtnSrch:hover{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background-color: rgba(139, 139, 139, 0.544);
+    color: white;
+}
+
+
+.copyright{
+    margin-top: 30px   ;
+}
+
+
+  /********************************************************************** */
+ /*************************** Responsive Style ***************************/
+/************************************************************************/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) { 
+    html{
+        font-size: 2px;
+    }
+    .ContentContainer {
+        position: absolute;
+        top: 0px;
+        max-width: 1200px;
+        margin-inline: 26px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .searchbar .SearchInputs {
+        background-color: palegoldenrod;
+        width: 100%;
+    }
+    .SearchInputs .Input {
+        background-color: #1DAEFF;
+        /* align-items: end; */
+        width: -webkit-fill-available;
+        width: 69%;
+    }
+    .lastPartBanner img {
+        width: 90%;
+    }
+    .searchbar .SearchInputs {
+        background-color: rgb(255 255 255 / 0%);
+        backdrop-filter: blur(0px);
+        display: flex;
+        width: 100%;
+        box-shadow: 0px 0px 0px black;
+    }
+    .searchbar .SearchInputs {
+        background-color: rgb(255 255 255 / 0%);
+        backdrop-filter: blur(0px);
+        display: flex;
+        height: 50px;
+        width: 100%;
+        box-shadow: 0px 0px 0px black;
+    }
+.ForthCol{
+    background-color: red;
+    margin-top: 10px;
+}
+    
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { 
+
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) { 
+
+}
+.iconBurger{
+    display: none;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1384px) { 
+    html{
+        font-size: 8px;
+    }
+    body{
+    }
+    .HeroContainer {
+        width: 90%;
+        max-width: 130rem;
+        
+    }
+    .searchbar .SearchInputs {
+        width: 60.7rem;
+    }
+    .SearchInputs {
+        padding:2.2rem;
+    }
+    .searchButton button img{
+        width: 2rem;
+    }
+    .ContentContainer {
+
+        gap: 23px;
+    }
+    .searchbar .ButtonOptions {
+        height: 30px;
+    }
+    .centerContainerRec {
+        justify-content: center;
+    }
+    .lastPartContainer{
+        overflow: hidden;
+    }
+    .ContentText {
+        width: 222px;
+        gap: 20px;
+    }
+    .BackgroundBanner {
+        width: 100%;
+        height: 62rem;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+  
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1123px) { 
+    .iconBurger{
+        display: flex;
+    }
+    header .UpBar {
+       height: auto;
+       margin-block: 20px;
+    }
+    .logo{
+        margin-block: 10px;
+    }
+    header .UpBar nav {
+        height: 50px;
+        display: none;
+    }
+    .BarRecAdded {
+
+        margin-bottom: 4rem;
+    }
+    .ContentText {
+        width: 222px;
+        gap: 20px;
+        position: absolute;
+        text-shadow: 0px 0px 10px rgb(135, 135, 135);
+    }
+
+    .searchbar .SearchInputs {
+       flex-wrap: wrap;
+       height: auto;
+    }
+    .ContentContainer {
+        height: auto;
+        margin-top: 22px;
+    }
+
+    .searchbar .SearchInputs {
+        width: 28.7rem;
+    }
+    .SearchInputs .Input {
+        padding: 10px;
+    }
+    .SearchInputs {
+        gap: 10px;
+
+    }
+    .SearchInputs .Input {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(255 255 255 / 50%) ;
+    }
+    .SearchInputs .Input:nth-child(1) {
+        padding: 10px;
+        border-radius: 10px;
+        border-top-left-radius: 0%;
+    }
+    .searchbar .SearchInputs {
+        background-color: rgb(255 255 255 / 0%);
+        backdrop-filter: blur(0px);
+        display: flex;
+        height: 50px;
+        box-shadow: 0px 0px 0px black;
+    }
+    .SearchInputs {
+        padding: 0;
+    }
+    .searchButton {
+        padding: 0;
+    }
+    .cardSection .cardItems {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 25px;
+    } 
+    .ContentContainer .content h1 {
+        line-height: 70px;
+        width: 500px;
+        font-size: 3.5rem;
+    }
+    .ContentContainer .content p{
+        display: none;
+    }
+
+    .socialMedia {
+        display: flex;
+        padding-block: 20px;
+        margin-bottom: 30px;
+        gap: 25px;
+    }
+    .FotterContent .FirstCol {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .logo {
+        width: auto;
+    }
+    
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) { 
+    
+    .searchbar .SearchInputs {
+       flex-wrap: wrap;
+       height: auto;
+    }
+    .ContentContainer{
+    }
+    .BackgroundBanner{
+        height: 78rem;
+    }
+    .searchbar .SearchInputs {
+        width: 28.7rem;
+    }
+    .SearchInputs .Input {
+        padding: 10px;
+    }
+    .SearchInputs {
+        gap: 10px;
+
+    }
+    .SearchInputs .Input {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(255 255 255 / 50%) ;
+    }
+    .SearchInputs .Input:nth-child(1) {
+        padding: 10px;
+        border-radius: 10px;
+        border-top-left-radius: 0%;
+    }
+    .searchbar .SearchInputs {
+        background-color: rgb(255 255 255 / 0%);
+        backdrop-filter: blur(0px);
+        display: flex;
+        height: 50px;
+        width:90%;
+        box-shadow: 0px 0px 0px black;
+    }
+    .SearchInputs {
+        padding: 0;
+    }
+    .searchButton {
+        padding: 0;
+    }
+    .cardSection .cardItems {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 25px;
+    }   
+    .BackgroundBanner {
+        height: 62rem;
+    }
+
+}
+@media only screen and (max-width: 776px) { 
+    .ContentContainer .content h1 {
+        font-size: 2.5rem;
+    }
+.HeroContainer{
+    overflow: hidden;
+}
+.ContentContainer .content h1 {
+    font-size: 2.5rem;
+    width: -webkit-fill-available;
+}
+
+
+.RecCardItem{
+    flex-wrap: wrap;
+    width: 200px;
+    padding: 15px;
+    border-radius: 15px;
+    gap:12px;
+}
+.RecCardItem .coverRecItem{
+    width: 200px;
+    height:150px;
+}
+.RecCardItem .coverRecItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;    
+}
+.RecCardItem .Informations{
+    width: 100%;
+    margin-top: 0;
+    gap: 8px;
+}
+.centerContainerRec{
+    column-gap: 20px;
+}
+}
+
+
+@media only screen and (max-width: 600px) { 
+.carditem img {
+    transition: .3s;
+    border-radius: 15px;
+    width: 160px;
+}
+.cardSection .cardItems .CardTitle {
+    position: relative;
+    top: -200px;
+    display: flex;
+    justify-content: center;
+}
+.cardSection .cardItems {
+    position: relative;
+    display: flex;
+    column-gap: 0px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.cardSection .cardItems p {
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+
+
+.RecCardItem{
+    flex-wrap: wrap;
+    width: 200px;
+    padding: 15px;
+    border-radius: 15px;
+    gap:12px;
+}
+.RecCardItem .coverRecItem{
+    width: 200px;
+    height:150px;
+}
+.RecCardItem .coverRecItem img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;    
+}
+.RecCardItem .Informations{
+    width: 100%;
+    /* background-color: aqua; */
+    margin-top: 0;
+    gap: 8px;
+}
+.centerContainerRec{
+    gap:0px;
+}
+/* Final Part */
+.lastPartContainer{
+    background-color: red;
+    border-radius: 20px;
+}
+.lastPartContainer button{
+    padding-inline: 20px;
+    font-size: 1.4rem;
+}
+.ContentText{
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ContentText p{
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+.ContentText p:nth-child(1) {
+    font-size: 3rem;
+}
+.ContentText p:nth-child(2) {
+    text-align: center;
+}
+
+}
+.socialMedia img{
+    transition: .3s
+}
+.socialMedia img:hover{
+    transition: .3s;
+    transform: translateY(-0px) scale(1.3);
+}
+
